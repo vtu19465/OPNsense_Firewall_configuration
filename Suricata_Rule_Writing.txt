@@ -1,0 +1,12 @@
+NMAP SYN scan Detection -
+alert tcp any any -> any any (msg:"POSSIBLE NMAP STEALTH SCAN DETECTED"; flow:stateless; flags:S; priority:S; threshold:type threshold, track by_src, count 50, seconds 1;classtype:attempted-recon; sid:1234;)
+
+Detect HTTP GET request -
+alert http any any -> any any (msg:"HTTP GET Request Detected"; content:"GET"; http_method; sid:1000001; rev:1;)
+
+- Common actions:
+        - `alert`: Generate an alert.
+        - `log`: Log the event.
+        - `drop`: Drop the packet (requires inline mode).
+        - `reject`: Reject the packet and notify the sender.
+        - `pass`: Ignore the packet (whitelisting).
