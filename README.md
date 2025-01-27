@@ -14,7 +14,7 @@ To design and implement a secure network infrastructure using OPNsense, focusing
 
 ### Tools Used
 
-- Squid
+- Suricata
 - Network analysis tools (such as Wireshark) for capturing and examining network traffic.
 - Telemetry generation tools to create realistic network traffic and attack scenarios.
 
